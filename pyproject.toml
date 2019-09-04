@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "trashbot"
+version = "0.1.0"
+description = ""
+authors = ["Jacob Kaplan-Moss <jacob@jacobian.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+ics = "^0.5"
+requests = "^2.22.0"
+dateparser = "^0.7.1"
+flask = "^1.1.1"
+twilio = "^6.29.4"
+python-dotenv = "^0.10.3"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.8.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
