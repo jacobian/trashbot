@@ -1,4 +1,4 @@
-# 🗑🤖
+# 🗑♻️🤖 
 
 Remind me to put out the trash. Also a chance to fool with Google Cloud Run.
 
