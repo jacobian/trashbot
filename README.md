@@ -27,6 +27,7 @@ gcloud beta run services add-iam-policy-binding trashbot \
     --member=serviceAccount:scheduler@{PROJECT-ID}.iam.gserviceaccount.com \
     --role=roles/run.invoker
 
+# Run this nightly at 8pm
 gcloud beta scheduler jobs create http nightly \
     --schedule "0 20 * * *" \
     --http-method=GET \
