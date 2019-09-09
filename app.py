@@ -16,7 +16,7 @@ URL = "http://cal.my-waste.mobi/admin/calendars/561-BLAC-collection-426-S2337-co
 @app.route("/", defaults={"when": "tomorrow"})
 @app.route("/<when>")
 def index(when):
-    date = arrow.get(dateparser.parse(when))
+    date = arrow.get(dateparser.parse(when, settings={"TIMEZONE": "US/Eastern"}))
     cal = ics.Calendar(requests.get(URL).text)
     messages = [event.name.lower() for event in cal.timeline.on(date)]
     message = f"🗑🤖 {when.title()} is {', '.join(messages)}" if messages else ""
